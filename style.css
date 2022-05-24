@@ -331,6 +331,18 @@ body{
     text-align: center;
 }
 
+#scroll_to_top {
+    position: fixed;
+    width: 60px;
+    height: 25px;
+    bottom: 230px;
+    z-index: 100;
+    right: 30px;
+}
+
+#scroll_to_top img {
+    width: 60px;
+}
 
 
 /*fin*/
