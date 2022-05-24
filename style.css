@@ -11,14 +11,36 @@ body{
 }
 
 .navbar{
-    position: fixed;
     z-index: 1000;
 }
 
+.divnav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .imgnav{
     width: 100px;
-
 }
+
+.imgnav2{
+    display: none;
+}
+
+@media (max-width:765px){
+    .imgnav{
+        display: none;
+    }
+
+    .imgnav2{
+        display: flex;
+        width: 99%;
+        height: 50px;
+    }
+}
+
+/*Card present*/
 
 .cards1{
     display: flex;
@@ -347,8 +369,18 @@ body{
 .footmenu{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     width: 20%;
+}
+
+@media (max-width:765px){
+    .footmenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
 }
 
 .idfoot:hover{
