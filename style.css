@@ -10,6 +10,16 @@ body{
     border-radius: 50px;
 }
 
+@keyframes identifiant{ 
+
+    from {
+        width: 300px
+    }
+    to {
+        width: 100px;
+    }
+}
+
 .barnav{
     display: flex;
     justify-content: center;
@@ -387,9 +397,7 @@ body{
 }
 
 #scroll_to_top {
-    display: flex;
-    justify-content: flex-end;
-    
+    position: fixed;
 }
 
 #scroll_to_top img {
@@ -400,50 +408,75 @@ body{
 
 /*FAQ*/
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+.fak h2{
+    display: flex;
+    justify-content: center;
+}
+
+.faq-heading{
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+
+.faq-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hr-line{
+    width: 60%;
+    margin: auto;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    background-color: #eee;
+    color: #444;
     cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+    font-size: 20px;
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+   width: 50%; 
+   padding: auto;
+   
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .faq-page:hover {
+    background-color: #F9F9F9;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 18px;
+    background-color: white;
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.faq-page:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
 
 /*fin*/
 
