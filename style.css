@@ -10,16 +10,14 @@ body{
     border-radius: 50px;
 }
 
-.navbar{
-    z-index: 1000;
-}
-
-.divnav{
-    width: 100%;
+.barnav{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffffcb;
+    padding: 7px;
 }
+
 .imgnav{
     width: 100px;
 }
@@ -28,15 +26,39 @@ body{
     display: none;
 }
 
-@media (max-width:765px){
+.list{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    
+}
+
+.barlink{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+}
+
+.barlink:hover{
+    color: black;
+}
+
+
+
+@media (max-width:898px){
+    
     .imgnav{
         display: none;
     }
 
     .imgnav2{
         display: flex;
-        width: 99%;
+        width: 50px;
         height: 50px;
+        justify-content: center;
+
     }
 }
 
@@ -54,6 +76,7 @@ body{
     background-color: black;
     margin-top: 55px;
     margin-left: 5px;
+    margin-right: 5px;
     padding: 50px;
     border-radius: 20px;
 }
@@ -69,7 +92,7 @@ body{
 }
 
 .loremh{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .loremp{
@@ -82,14 +105,20 @@ body{
     background-color: #e30613;
     margin-top: 30px;
     margin-bottom: 10px;
-    border-radius: 25px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 10px;
     color: white;
+    box-shadow: 0 2px 0 rgb(172, 171, 171);
+    
+}
+
+.b1:active{
+    box-shadow: 0 0px 0 rgb(160, 160, 160);
 }
 
 .b12{
     background-color: #ffffff;
-    border-radius: 25px;
+    border-radius: 10px;
     color: black;
     padding: 10px;
 }
@@ -144,7 +173,7 @@ body{
     margin-top: 30px;
     box-shadow: 0 0 5px 0 ;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
 #lorem2{
@@ -154,7 +183,7 @@ body{
     margin-top: 30px;
     box-shadow: 0 0 5px 0;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     
 }
 
@@ -165,7 +194,7 @@ body{
     margin-top: 30px;
     box-shadow: 0 0 5px 0 ;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
 #lorem4{
@@ -175,14 +204,15 @@ body{
     margin-top: 30px;
     box-shadow: 0 0 5px 0 ;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px); 
+    
 }
 
 #lorem5{
     background-color: #383838ad;
     box-shadow: 0 0 5px 0 ;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px); 
 }
 
 
@@ -195,12 +225,12 @@ body{
     background-color: #383838ad;
     box-shadow: 0 0 5px 0;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -256,13 +286,13 @@ body{
 
 /*fin*/
 
-/* 10 commandement */
+/* Mes valeurs*/
 
 .commande{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -273,12 +303,20 @@ body{
     border-radius: 20px;
     box-shadow: 0 0 5px 0;
     background: inherit;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 }
 
+@media(min-width: 992px){
+    .commande{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
 
 .imgcommande{
-    margin-right: 25px;
+    width: 50%;
+    
 }
 
 #imgcommande{
@@ -286,10 +324,18 @@ body{
     height: 100%;
 }
 
+@media (max-width:765px){
+    .imgcommande{
+        display: none;
+    }
+}
+
 
 /*fin*/
 
+
 /*block d'intervention*/
+
 
 
 .bloc{
@@ -300,13 +346,17 @@ body{
     align-items: center;
     border-radius: 10px;
     background-color: #f39e9fee;
-    box-shadow: 3px 3px 16px 0 rgb(49 50 49 / 11%);
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;   
+    width: 80%;
 }
 
 
 .link-inter{
+    color: black;
+    font-weight: 500;
+}
+
+.link-inter:hover{
     color: black;
     font-weight: 500;
 }
@@ -331,21 +381,73 @@ body{
     text-align: center;
 }
 
+.linkscroll{
+    display: flex;
+    justify-content: space-around;
+}
+
 #scroll_to_top {
-    position: fixed;
-    width: 60px;
-    height: 25px;
-    bottom: 230px;
-    z-index: 100;
-    right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    
 }
 
 #scroll_to_top img {
-    width: 60px;
+    width: 50px;
 }
+
+/*fin*/
+
+/*FAQ*/
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 
 /*fin*/
+
+
 
 /*footer*/
 
@@ -371,12 +473,17 @@ body{
 
 }
 
-
 .link1{
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
 }
+
+.link2{
+    width: 44px;
+    height: 44px;
+}
+
 
 .footmenu{
     display: flex;
