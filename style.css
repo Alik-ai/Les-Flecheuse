@@ -3,7 +3,7 @@ body{
     animation-duration: 5s;
     margin: 0;
     padding: 0;
-    /*background-image: url(./image/fondmeilleur.png);*/
+    background-image: url(./image/fondmeilleur.png);
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
@@ -76,7 +76,7 @@ body{
 /*Card present*/
 
 .cards1{
-    display: flex;
+    display: flex ;
     justify-content: center;
 }
 
@@ -90,6 +90,13 @@ body{
     margin-right: 5px;
     padding: 50px;
     border-radius: 20px;
+}
+
+@media (max-width:760px){
+    .cards1{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .card21{
@@ -172,53 +179,38 @@ body{
 }
 
 #lorem1{
-    background-color: #383838ad;
+    background-color: rgba(255, 255, 255, 0.568);
     border-radius: 20px;
     padding: 50px;
     margin-top: 30px;
     box-shadow: 0 0 5px 0 ;
-    background: inherit;
-    backdrop-filter: blur(15px);
 }
 
 #lorem2{
-    background-color: #383838ad ;
+    background-color: rgba(255, 255, 255, 0.568);
     border-radius: 20px;
     padding: 50px;
     margin-top: 30px;
-    box-shadow: 0 0 5px 0;
-    background: inherit;
-    backdrop-filter: blur(15px);
-    
+    box-shadow: 0 0 5px 0;    
 }
 
 #lorem3{
-    background-color: #383838ad;
+    background-color: rgba(255, 255, 255, 0.568);
     border-radius: 20px;
     padding: 50px;
     margin-top: 30px;
-    box-shadow: 0 0 5px 0 ;
-    background: inherit;
-    backdrop-filter: blur(15px);
+    box-shadow: 0 0 5px 0 ;    
 }
 
 #lorem4{
-    background-color: #383838ad;
+    background-color: rgba(255, 255, 255, 0.568);
     border-radius: 20px;
     padding: 50px;
     margin-top: 30px;
     box-shadow: 0 0 5px 0 ;
-    background: inherit;
-    backdrop-filter: blur(15px); 
-    
 }
 
-#lorem5{
-    background-color: #383838ad;
-    box-shadow: 0 0 5px 0 ;
-    background: inherit;
-    backdrop-filter: blur(15px); 
-}
+
 
 
 /*fin*/
@@ -227,10 +219,8 @@ body{
 /*Mon Manifest*/
 
 .manif{
-    background-color: #383838ad;
+    background-color: rgba(255, 255, 255, 0.568);
     box-shadow: 0 0 5px 0;
-    background: inherit;
-    backdrop-filter: blur(15px);
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -302,13 +292,11 @@ body{
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-box-pack: center;
-    background-color: #383838ad;
+    background-color: rgba(255, 255, 255, 0.568);
     color: rgb(0, 0, 0);
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 0 5px 0;
-    background: inherit;
-    backdrop-filter: blur(20px);
 }
 
 @media(min-width: 992px){
@@ -593,10 +581,75 @@ body{
     text-align: center;
     margin-top: 60px;
     margin-bottom: 30px;
-    border: 1px solid black;
     background-color: #F9F9F9;
+    width: 40%;
 }
 
+.refSection, #refName{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*button contact*/
+
+span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-20px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+
+}
+span a:before,
+span a:after{
+    position: absolute;
+    content: "Nous contacter";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-decoration: none;
+}
+span a:before{
+    color: rgb(255, 255, 255);
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+    text-decoration: none;
+}
+span a:after{
+    color: #000;
+    text-decoration: none;
+    transform: rotateX(90deg) translateZ(20px);
+    background: rgba(255, 255, 255, 0.774);
+}
+span a:hover{
+    transform: translateZ(-50px) rotateX(-90deg);
+    text-decoration: none;
+    color: #000;
+}
+
+.buttonContact{
+    text-align: center;
+    margin-top: 400px;
+    text-decoration: none;
+}
 
 
 /*footer*/
@@ -605,8 +658,9 @@ body{
 .footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 20px;
-    background-color: black;
+    background-color: #f39e9fee;
     padding-bottom: 15px;
     padding-left: 40px;
     padding-right: 40px;
@@ -623,15 +677,21 @@ body{
 
 }
 
+.imglien{
+    display: flex;
+    justify-content: space-around;
+}
+
 .link1{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+    width: 30;
+    height: 30px;
+    margin-bottom: 6px;
+    margin-right: 7px;
 }
 
 .link2{
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -653,11 +713,11 @@ body{
 }
 
 .idfoot:hover{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .idfoot{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
