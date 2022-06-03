@@ -1,6 +1,4 @@
 body{
-    animation-name: fondapple ;
-    animation-duration: 5s;
     margin: 0;
     padding: 0;
     background-image: url(./image/fondmeilleur.png);
@@ -9,8 +7,18 @@ body{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 50px;
-    
+       
+}
+
+@media(max-width:960px){
+    body{
+        background-image: url(./image/fondmeilleur-1.png);
+        background-attachment: fixed;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .fondsite{
@@ -610,7 +618,6 @@ span a{
     transform: translateZ(-20px);
     transition: transform .25s;
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
 
 }
 span a:before,
@@ -625,30 +632,23 @@ span a:after{
     border: 5px solid black;
     box-sizing: border-box;
     border-radius: 5px;
-    text-decoration: none;
 }
 span a:before{
     color: rgb(255, 255, 255);
     background: #000;
     transform: rotateY(0deg) translateZ(25px);
-    text-decoration: none;
 }
 span a:after{
     color: #000;
-    text-decoration: none;
-    transform: rotateX(90deg) translateZ(20px);
+    transform: rotateX(90deg) translateZ(25px);
     background: rgba(255, 255, 255, 0.774);
 }
 span a:hover{
-    transform: translateZ(-50px) rotateX(-90deg);
-    text-decoration: none;
-    color: #000;
+    transform: translateZ(-25px) rotateX(-90deg);
 }
-
 .buttonContact{
     text-align: center;
-    margin-top: 400px;
-    text-decoration: none;
+    margin-top: 90px;
 }
 
 
